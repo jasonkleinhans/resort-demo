@@ -51,35 +51,85 @@
             </p>
         </div>
 
-        <div id="booking" class="absolute bottom-12 left-0 w-full px-4 z-20">
-            <div class="max-w-5xl mx-auto bg-[#0B2530]/90 backdrop-blur-md p-4 sm:p-6 rounded-2xl shadow-2xl border border-white/10">
-                <form class="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
-                    <div>
-                        <label class="block text-xs uppercase tracking-wider text-amber-400 font-semibold mb-2">Check-In</label>
-                        <input type="date" class="w-full bg-white/10 text-white border border-white/20 rounded-lg p-3 text-sm focus:outline-none focus:border-amber-400">
-                    </div>
-                    <div>
-                        <label class="block text-xs uppercase tracking-wider text-amber-400 font-semibold mb-2">Check-Out</label>
-                        <input type="date" class="w-full bg-white/10 text-white border border-white/20 rounded-lg p-3 text-sm focus:outline-none focus:border-amber-400">
-                    </div>
-                    <div>
-                        <label class="block text-xs uppercase tracking-wider text-amber-400 font-semibold mb-2">Guests</label>
-                        <select class="w-full bg-white/10 text-white border border-white/20 rounded-lg p-3 text-sm focus:outline-none focus:border-amber-400">
-                            <option class="text-gray-800">1 Guest</option>
-                            <option class="text-gray-800" selected>2 Guests</option>
-                            <option class="text-gray-800">3 Guests</option>
-                            <option class="text-gray-800">4+ Guests</option>
-                        </select>
-                    </div>
-                    <div>
-                        <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold p-3 rounded-lg uppercase text-sm tracking-wider transition shadow-md">
-                            Check Availability
-                        </button>
-                    </div>
-                </form>
+        <div class="max-w-6xl mx-auto px-4">
+    <div class="bg-[#1A2E3B] rounded-2xl p-6 shadow-2xl border border-white/5">
+        <form id="nightsbridge-form" class="grid grid-cols-1 md:grid-cols-4 gap-6 items-end">
+            
+            <div class="relative">
+                <label for="checkin" class="block text-xs font-bold uppercase tracking-wider text-amber-500 mb-2">
+                    Check-In
+                </label>
+                <input 
+                    type="date" 
+                    id="checkin" 
+                    required
+                    class="w-full bg-[#243B4A] text-gray-200 border border-gray-600/40 rounded-lg p-3 text-sm focus:outline-none focus:border-amber-500 transition duration-200"
+                >
             </div>
-        </div>
-    </header>
+            
+            <div class="relative">
+                <label for="checkout" class="block text-xs font-bold uppercase tracking-wider text-amber-500 mb-2">
+                    Check-Out
+                </label>
+                <input 
+                    type="date" 
+                    id="checkout" 
+                    required
+                    class="w-full bg-[#243B4A] text-gray-200 border border-gray-600/40 rounded-lg p-3 text-sm focus:outline-none focus:border-amber-500 transition duration-200"
+                >
+            </div>
+            
+            <div>
+                <label for="guests" class="block text-xs font-bold uppercase tracking-wider text-amber-500 mb-2">
+                    Guests
+                </label>
+                <select 
+                    id="guests" 
+                    class="w-full bg-[#243B4A] text-gray-200 border border-gray-600/40 rounded-lg p-3 text-sm focus:outline-none focus:border-amber-500 transition duration-200"
+                >
+                    <option value="1">1 Guest</option>
+                    <option value="2" selected>2 Guests</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
+                    <option value="5">5+ Guests</option>
+                </select>
+            </div>
+            
+            <div>
+                <button 
+                    type="submit" 
+                    class="w-full bg-amber-500 hover:bg-amber-600 text-white font-extrabold p-3 rounded-lg uppercase text-sm tracking-widest transition-all duration-300 shadow-md hover:shadow-lg"
+                >
+                    Check Availability
+                </button>
+            </div>
+            
+        </form>
+    </div>
+</div>
+
+<script>
+    document.getElementById('nightsbridge-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // 1. Extract values from input fields
+        const checkinVal = document.getElementById('checkin').value;   // Output: YYYY-MM-DD
+        const checkoutVal = document.getElementById('checkout').value; // Output: YYYY-MM-DD
+        const guestsVal = document.getElementById('guests').value;
+        
+        // 2. Base URL using your live profile link (ID: 13989)
+        let nightsbridgeUrl = `https://book.nightsbridge.com/13989`;
+        
+        // 3. Build query parameters expected by the system engine
+        // Nightsbridge accepts standard parameters: start_date, end_date, and adults
+        if (checkinVal && checkoutVal) {
+            nightsbridgeUrl += `?start_date=${checkinVal}&end_date=${checkoutVal}&adults=${guestsVal}`;
+        }
+        
+        // 4. Open directly to checkout flow in a clear new window tab
+        window.open(nightsbridgeUrl, '_blank');
+    });
+</script>
 
     <section class="py-20 px-4 max-w-7xl mx-auto">
         <div class="text-center mb-16">
