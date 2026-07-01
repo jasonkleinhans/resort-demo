@@ -1,1 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lake Oanob Resort | Waterfront Oasis in Namibia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Lato', sans-serif; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-[#FBF9F6] text-gray-800 antialiased">
 
+    <nav class="fixed top-0 left-0 w-full bg-[#0B2530]/95 backdrop-blur-md text-white z-50 shadow-md transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2 cursor-pointer">
+                <div class="w-10 h-10 bg-teal-500 rounded-full flex items-center justify-center font-serif text-xl font-bold text-white">O</div>
+                <span class="font-serif text-xl tracking-wider font-bold">LAKE OANOB</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm uppercase tracking-wider font-semibold">
+                <a href="#" class="hover:text-amber-500 transition">Our Story</a>
+                <a href="#" class="hover:text-amber-500 transition">Accommodation</a>
+                <a href="#" class="hover:text-amber-500 transition">Activities</a>
+                <a href="#" class="hover:text-amber-500 transition">Dining</a>
+                <a href="#" class="hover:text-amber-500 transition">Gallery</a>
+                <a href="#" class="hover:text-amber-500 transition">Contact</a>
+            </div>
+            <div>
+                <a href="#booking" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2.5 px-6 rounded-full uppercase text-xs tracking-wider transition shadow-lg">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative h-screen flex items-center justify-center overflow-hidden pt-20">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80" alt="Lake Oanob Sunset" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-[#FBF9F6]"></div>
+        </div>
+        
+        <div class="relative z-10 text-center text-white px-4 max-w-4xl mx-auto -mt-16">
+            <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-tight mb-6">
+                Body & Soul in <br><span class="text-amber-400">Harmony with Nature</span>
+            </h1>
+            <p class="text-lg sm:text-xl md:text-2xl font-light text-gray-200 mb-8 max-w-2xl mx-auto">
+                A refreshing waterfront oasis just one hour south of Windhoek. Experience luxury chalets, wild savanna, and thrilling water adventures.
+            </p>
+        </div>
+
+        <div id="booking" class="absolute bottom-12 left-0 w-full px-4 z-20">
+            <div class="max-w-5xl mx-auto bg-[#0B2530]/90 backdrop-blur-md p-4 sm:p-6 rounded-2xl shadow-2xl border border-white/10">
+                <form class="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-amber-400 font-semibold mb-2">Check-In</label>
+                        <input type="date" class="w-full bg-white/10 text-white border border-white/20 rounded-lg p-3 text-sm focus:outline-none focus:border-amber-400">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-amber-400 font-semibold mb-2">Check-Out</label>
+                        <input type="date" class="w-full bg-white/10 text-white border border-white/20 rounded-lg p-3 text-sm focus:outline-none focus:border-amber-400">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-amber-400 font-semibold mb-2">Guests</label>
+                        <select class="w-full bg-white/10 text-white border border-white/20 rounded-lg p-3 text-sm focus:outline-none focus:border-amber-400">
+                            <option class="text-gray-800">1 Guest</option>
+                            <option class="text-gray-800" selected>2 Guests</option>
+                            <option class="text-gray-800">3 Guests</option>
+                            <option class="text-gray-800">4+ Guests</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold p-3 rounded-lg uppercase text-sm tracking-wider transition shadow-md">
+                            Check Availability
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-20 px-4 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <span class="text-sm uppercase tracking-widest text-teal-600 font-bold">Choose Your Adventure</span>
+            <h2 class="font-serif text-3xl sm:text-5xl font-semibold mt-2 text-[#0B2530]">Discover Your Perfect Getaway</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 transition hover:-translate-y-1 hover:shadow-xl duration-300">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="Luxury Chalet" class="w-full h-full object-cover">
+                    <span class="absolute top-4 left-4 bg-teal-600 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase">Premium</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl font-bold text-[#0B2530] mb-2">Luxury Chalets & Rooms</h3>
+                    <p class="text-gray-600 text-sm mb-4">Waterfront views, private wooden decks, and fully equipped self-catering options perfect for relaxing.</p>
+                    <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                        <span class="text-sm font-semibold text-gray-500">From <strong class="text-lg text-amber-600">N$ 2,500</strong> / night</span>
+                        <a href="#" class="text-teal-600 font-bold text-sm uppercase tracking-wider hover:text-teal-800 transition">Explore &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 transition hover:-translate-y-1 hover:shadow-xl duration-300">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1534067783941-51c9c23ecefd?auto=format&fit=crop&w=800&q=80" alt="Camping" class="w-full h-full object-cover">
+                    <span class="absolute top-4 left-4 bg-amber-500 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase">Adventure</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl font-bold text-[#0B2530] mb-2">Waterfront Camping</h3>
+                    <p class="text-gray-600 text-sm mb-4">Embrace pure nature. Prime shoreline campsites complete with electricity, shade, and neat braai facilities.</p>
+                    <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                        <span class="text-sm font-semibold text-gray-500">From <strong class="text-lg text-amber-600">N$ 350</strong> / night</span>
+                        <a href="#" class="text-teal-600 font-bold text-sm uppercase tracking-wider hover:text-teal-800 transition">Explore &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 transition hover:-translate-y-1 hover:shadow-xl duration-300">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80" alt="Day Visitor Facility" class="w-full h-full object-cover">
+                    <span class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase">Day Passes</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-serif text-2xl font-bold text-[#0B2530] mb-2">Day Visits & Facilities</h3>
+                    <p class="text-gray-600 text-sm mb-4">Join us for a relaxing afternoon. Gain access to our stunning Giraffe Pool Bar, restaurant, and facilities.</p>
+                    <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                        <span class="text-sm font-semibold text-gray-500">From <strong class="text-lg text-amber-600">N$ 150</strong> / adult</span>
+                        <a href="#" class="text-teal-600 font-bold text-sm uppercase tracking-wider hover:text-teal-800 transition">Explore &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#0B2530] text-white py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-12 flex flex-col md:flex-row md:items-end justify-between">
+                <div>
+                    <span class="text-sm uppercase tracking-widest text-amber-400 font-bold">Unforgettable Memories</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl font-semibold mt-2">The Oanob Experience</h2>
+                </div>
+                <p class="text-gray-400 max-w-md mt-4 md:mt-0">
+                    Whether you are seeking extreme water sports or peaceful savanna tranquility, our resort bridges the best of both worlds.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="relative group overflow-hidden rounded-xl h-96 md:col-span-2 md:row-span-2">
+                    <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1000&q=80" alt="Game Drive" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
+                        <h4 class="font-serif text-2xl font-bold mb-1">Guided Game Drives</h4>
+                        <p class="text-sm text-gray-300">Spot beautiful giraffe, oryx, zebras, and eland roaming across 6,200 hectares.</p>
+                    </div>
+                </div>
+
+                <div class="relative group overflow-hidden rounded-xl h-48">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=500&q=80" alt="Water Skiing" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
+                        <h4 class="font-serif text-lg font-bold">Water Skiing & Wakeboarding</h4>
+                    </div>
+                </div>
+
+                <div class="relative group overflow-hidden rounded-xl h-48">
+                    <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=500&q=80" alt="Solar Boat Cruise" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
+                        <h4 class="font-serif text-lg font-bold">Solar Boat Cruises</h4>
+                    </div>
+                </div>
+
+                <div class="relative group overflow-hidden rounded-xl h-48">
+                    <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=500&q=80" alt="Lake Spa" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
+                        <h4 class="font-serif text-lg font-bold">The Lake Spa Treatment</h4>
+                    </div>
+                </div>
+
+                <div class="relative group overflow-hidden rounded-xl h-48">
+                    <img src="https://images.unsplash.com/photo-1561501900-3701fa6a0864?auto=format&fit=crop&w=500&q=80" alt="Giraffe Pool Bar" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
+                        <h4 class="font-serif text-lg font-bold">Giraffe Pool Bar & Dining</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-amber-50/60 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="text-sm uppercase tracking-widest text-amber-600 font-bold">Guest Experiences</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-semibold mt-2 mb-12 text-[#0B2530]">Loved by Travelers Worldwide</h2>
+            
+            <div class="bg-white p-8 rounded-2xl shadow-xl relative border border-amber-100">
+                <div class="text-amber-500 flex justify-center space-x-1 mb-4">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+                <p class="text-lg italic text-gray-700 font-serif mb-6">
+                    "An incredible oasis! We stayed in a luxury waterfront chalet and watched the sunset directly over the dam. The game drive was fantastic, and it is so close to Windhoek. Perfect weekend escape!"
+                </p>
+                <h5 class="font-bold text-[#0B2530] text-sm uppercase tracking-wider">Marta S. — Munich, Germany</h5>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#071922] text-gray-400 py-12 px-4 border-t border-white/5">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
+            <div>
+                <h4 class="text-white font-serif text-lg font-bold mb-4">Lake Oanob Resort</h4>
+                <p class="leading-relaxed">
+                    Rehoboth, Namibia <br>
+                    Just 100km South of Windhoek off the B1 Highway.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-white font-serif text-lg font-bold mb-4">Reservations & Enquiries</h4>
+                <p class="leading-relaxed">
+                    Email: <a href="mailto:reservations@oanob.com.na" class="text-amber-400 hover:underline">reservations@oanob.com.na</a><br>
+                    Tel/WhatsApp: <span class="text-white font-semibold">+264 (0) 81 129 1234</span>
+                </p>
+            </div>
+            <div class="text-left md:text-right">
+                <p>&copy; 2026 Lake Oanob Resort. All Rights Reserved.</p>
+                <p class="text-xs mt-2 text-gray-600">Designed for ultimate luxury and conversions.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
