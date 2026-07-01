@@ -10,8 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     
     <style>
+        html { scroll-behavior: smooth; }
         body { font-family: 'Lato', sans-serif; }
         .font-serif { font-family: 'Playfair Display', serif; }
+        /* Prevent layout clipping behind fixed nav during anchor jumps */
+        section { scroll-margin-top: 5rem; }
     </style>
 </head>
 <body class="bg-[#FBF9F6] text-gray-800 antialiased">
@@ -19,13 +22,13 @@
     <nav class="fixed top-0 left-0 w-full bg-[#0B2530]/95 backdrop-blur-md text-white z-50 shadow-md transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between relative">
             
-            <div class="flex items-center space-x-2 cursor-pointer">
+            <a href="#" class="flex items-center space-x-2 cursor-pointer">
                 <div class="w-10 h-10 bg-teal-600 rounded-full flex items-center justify-center font-serif text-xl font-bold text-white">O</div>
                 <span class="font-serif text-xl tracking-wider font-bold">LAKE OANOB</span>
-            </div>
+            </a>
             
             <div class="hidden md:flex space-x-8 text-sm uppercase tracking-wider font-semibold items-center h-full">
-                <a href="#" class="hover:text-amber-500 transition py-8">Our Story</a>
+                <a href="#our-story" class="hover:text-amber-500 transition py-8">Our Story</a>
                 
                 <div class="relative group h-full flex items-center">
                     <button class="hover:text-amber-500 transition py-8 flex items-center space-x-1 outline-none">
@@ -33,58 +36,130 @@
                         <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     
-                    <div class="absolute top-20 left-1/2 -translate-x-1/2 w-[680px] bg-white text-gray-800 rounded-xl shadow-2xl p-6 border border-gray-100 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 transform scale-95 group-hover:scale-100 grid grid-cols-2 gap-6 z-50">
+                    <div class="absolute top-20 left-1/2 -translate-x-1/2 w-[1000px] bg-white text-gray-800 rounded-xl shadow-2xl p-6 border border-gray-100 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 transform scale-95 group-hover:scale-100 grid grid-cols-4 gap-6 z-50 max-h-[85vh] overflow-y-auto">
                         
                         <div class="space-y-4">
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-teal-600 pb-1 border-b border-gray-100">Luxury Chalets</h4>
+                            
                             <div>
-                                <h4 class="text-xs font-bold uppercase tracking-wider text-teal-600 mb-2 pb-1 border-b border-gray-100">
-                                    Luxury Chalets <span class="text-gray-400 font-normal normal-case">(Max 4 Adults / 2 Kids)</span>
-                                </h4>
-                                <ul class="space-y-1.5 text-sm font-medium text-gray-700">
-                                    <li><a href="https://book.nightsbridge.com/13989" target="_blank" class="hover:text-amber-600 transition block py-0.5">Pumbaa Chalet</a></li>
-                                    <li><a href="https://book.nightsbridge.com/13989" target="_blank" class="hover:text-amber-600 transition block py-0.5">Nala Chalet</a></li>
-                                    <li><a href="https://book.nightsbridge.com/13989" target="_blank" class="hover:text-amber-600 transition block py-0.5">Mufasa Chalet</a></li>
+                                <span class="text-[10px] uppercase tracking-wide text-gray-400 font-bold block mb-1">Max 4 Adults & 2 Children</span>
+                                <ul class="space-y-0.5 text-sm font-medium text-gray-700">
+                                    <li><a href="https://book.nightsbridge.com/13989" target="_blank" class="hover:text-amber-600 transition block">Pumbaa</a></li>
+                                    <li><a href="https://book.nightsbridge.com/13989" target="_blank" class="hover:text-amber-600 transition block">Nala</a></li>
+                                    <li><a href="https://book.nightsbridge.com/13989" target="_blank" class="hover:text-amber-600 transition block">Mufasa</a></li>
                                 </ul>
                             </div>
                             
                             <div>
-                                <h4 class="text-xs font-bold uppercase tracking-wider text-teal-600 mb-2 pb-1 border-b border-gray-100">
-                                    Grand Chalets <span class="text-gray-400 font-normal normal-case">(Max 6 Adults / 2 Kids)</span>
-                                </h4>
-                                <ul class="space-y-1.5 text-sm font-medium text-gray-700">
-                                    <li><a href="https://book.nightsbridge.com/13989" target="_blank" class="hover:text-amber-600 transition block py-0.5">Timon Chalet</a></li>
-                                    <li><a href="https://book.nightsbridge.com/13989" target="_blank" class="hover:text-amber-600 transition block py-0.5">Rafiki Chalet</a></li>
-                                    <li><a href="https://book.nightsbridge.com/13989" target="_blank" class="hover:text-amber-600 transition block py-0.5">Simba Chalet</a></li>
+                                <span class="text-[10px] uppercase tracking-wide text-gray-400 font-bold block mb-1">Max 6 Adults & 2 Children</span>
+                                <ul class="space-y-0.5 text-sm font-medium text-gray-700">
+                                    <li><a href="https://book.nightsbridge.com/13989" target="_blank" class="hover:text-amber-600 transition block">Timon</a></li>
+                                    <li><a href="https://book.nightsbridge.com/13989" target="_blank" class="hover:text-amber-600 transition block">Rafiki</a></li>
+                                    <li><a href="https://book.nightsbridge.com/13989" target="_blank" class="hover:text-amber-600 transition block">Simba</a></li>
                                 </ul>
+                            </div>
+
+                            <div>
+                                <span class="text-[10px] uppercase tracking-wide text-gray-400 font-bold block mb-1">Max 6 People</span>
+                                <ul class="space-y-0.5 text-sm font-medium text-gray-700">
+                                    <li><a href="https://book.nightsbridge.com/13989" target="_blank" class="hover:text-amber-600 transition block font-semibold">Kiara Suite</a></li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <span class="text-[10px] uppercase tracking-wide text-gray-400 font-bold block mb-1">Max 4 Adults</span>
+                                <div class="grid grid-cols-2 gap-x-1 text-sm font-medium text-gray-700">
+                                    <ul class="space-y-0.5">
+                                        <li><a href="https://book.nightsbridge.com/13989" target="_blank" class="hover:text-amber-600 transition block">Sarabi 1</a></li>
+                                        <li><a href="https://book.nightsbridge.com/13989" target="_blank" class="hover:text-amber-600 transition block">Sarabi 2</a></li>
+                                        <li><a href="https://book.nightsbridge.com/13989" target="_blank" class="hover:text-amber-600 transition block">Sarabi 3</a></li>
+                                    </ul>
+                                    <ul class="space-y-0.5">
+                                        <li><a href="https://book.nightsbridge.com/13989" target="_blank" class="hover:text-amber-600 transition block">Sarabi 4</a></li>
+                                        <li><a href="https://book.nightsbridge.com/13989" target="_blank" class="hover:text-amber-600 transition block">Sarabi 5</a></li>
+                                        <li><a href="https://book.nightsbridge.com/13989" target="_blank" class="hover:text-amber-600 transition block">Sarabi 6</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-span-2 space-y-4 border-l border-r border-gray-100 px-4">
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-teal-600 pb-1 border-b border-gray-100">Camping & Caravanning</h4>
+                            
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="space-y-3">
+                                    <div>
+                                        <span class="text-[10px] uppercase tracking-wide text-red-600 font-bold block">Not Shaded, No Waterfront</span>
+                                        <p class="text-xs font-medium text-gray-600">C8, B2, B6, B7, B9</p>
+                                    </div>
+                                    <div>
+                                        <span class="text-[10px] uppercase tracking-wide text-amber-600 font-bold block">Shaded, No Waterfront</span>
+                                        <p class="text-xs font-medium text-gray-600 leading-tight">C1, C2, B1, B4, B8, B11, Bay View, Palm Beach</p>
+                                    </div>
+                                    <div>
+                                        <span class="text-[10px] uppercase tracking-wide text-teal-600 font-bold block">Standard Shaded, Waterfront</span>
+                                        <p class="text-xs font-medium text-gray-600 leading-tight">Peacock Bay, Mallards Heaven, B5, B13</p>
+                                    </div>
+                                </div>
+                                <div class="space-y-3">
+                                    <div>
+                                        <span class="text-[10px] uppercase tracking-wide text-teal-600 font-bold block">New Shaded, Waterfront</span>
+                                        <p class="text-xs font-medium text-gray-600">The Big 4, Moyo, B12</p>
+                                    </div>
+                                    <div>
+                                        <span class="text-[10px] uppercase tracking-wide text-emerald-600 font-bold block">Luxury Shaded, Waterfront View</span>
+                                        <p class="text-[11px] font-medium text-gray-600 leading-snug">Aloe Bay, Mountain View, Berakah, La Rive, Ruben Bay, Flintstones Heaven, C7, B14, Pride Rock, Hakuna Matata</p>
+                                    </div>
+                                    <div>
+                                        <span class="text-[10px] uppercase tracking-wide text-indigo-600 font-bold block">Exclusive Bays</span>
+                                        <p class="text-xs font-medium text-gray-600">Bushman's Bay, Putter's Bay</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pt-2">
+                                <a href="https://book.nightsbridge.com/13989" target="_blank" class="inline-block text-xs bg-teal-50 text-teal-700 font-bold px-3 py-1.5 rounded hover:bg-teal-100 transition w-full text-center">Configure Campsites via NightsBridge &rarr;</a>
                             </div>
                         </div>
 
                         <div class="space-y-4">
-                            <div>
-                                <h4 class="text-xs font-bold uppercase tracking-wider text-teal-600 mb-2 pb-1 border-b border-gray-100">
-                                    Sarabi Rooms <span class="text-gray-400 font-normal normal-case">(Max 4 Adults)</span>
-                                </h4>
-                                <div class="grid grid-cols-2 gap-x-2 text-sm font-medium text-gray-700">
-                                    <ul class="space-y-1.5">
-                                        <li><a href="https://book.nightsbridge.com/13989" target="_blank" class="hover:text-amber-600 transition block py-0.5">Sarabi 1</a></li>
-                                        <li><a href="https://book.nightsbridge.com/13989" target="_blank" class="hover:text-amber-600 transition block py-0.5">Sarabi 2</a></li>
-                                        <li><a href="https://book.nightsbridge.com/13989" target="_blank" class="hover:text-amber-600 transition block py-0.5">Sarabi 3</a></li>
+                            <div class="space-y-3">
+                                <h4 class="text-xs font-bold uppercase tracking-wider text-teal-600 pb-1 border-b border-gray-100">En-Suite Rooms</h4>
+                                
+                                <div>
+                                    <span class="text-[10px] uppercase tracking-wide text-gray-400 font-bold block mb-0.5">Twin Rooms (2 Single Beds) <span class="text-red-500 font-black">*Non-Self Catering</span></span>
+                                    <ul class="space-y-0.5 text-xs font-medium text-gray-700">
+                                        <li><a href="https://book.nightsbridge.com/13989" target="_blank" class="hover:text-amber-600 transition block">Scar 2 / Scar 3</a></li>
+                                        <li><a href="https://book.nightsbridge.com/13989" target="_blank" class="hover:text-amber-600 transition block">Zazu 3 / Zazu 4</a></li>
                                     </ul>
-                                    <ul class="space-y-1.5">
-                                        <li><a href="https://book.nightsbridge.com/13989" target="_blank" class="hover:text-amber-600 transition block py-0.5">Sarabi 4</a></li>
-                                        <li><a href="https://book.nightsbridge.com/13989" target="_blank" class="hover:text-amber-600 transition block py-0.5">Sarabi 5</a></li>
-                                        <li><a href="https://book.nightsbridge.com/13989" target="_blank" class="hover:text-amber-600 transition block py-0.5">Sarabi 6</a></li>
+                                </div>
+                                
+                                <div>
+                                    <span class="text-[10px] uppercase tracking-wide text-gray-400 font-bold block mb-0.5">Double Room (1 Double Bed)</span>
+                                    <ul class="space-y-0.5 text-xs font-medium text-gray-700">
+                                        <li><a href="https://book.nightsbridge.com/13989" target="_blank" class="hover:text-amber-600 transition block">Zazu 5 / Zazu 6</a></li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <span class="text-[10px] uppercase tracking-wide text-gray-400 font-bold block mb-0.5">Family Rooms</span>
+                                    <ul class="space-y-0.5 text-xs font-medium text-gray-700">
+                                        <li><a href="https://book.nightsbridge.com/13989" target="_blank" class="hover:text-amber-600 transition block">Scar 1 / Scar 4</a></li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <span class="text-[10px] uppercase tracking-wide text-indigo-600 font-bold block mb-0.5">Special Suites</span>
+                                    <ul class="space-y-0.5 text-xs font-semibold text-gray-800">
+                                        <li><a href="https://book.nightsbridge.com/13989" target="_blank" class="hover:text-amber-600 transition block">Zazu 1 / Zazu 2</a></li>
                                     </ul>
                                 </div>
                             </div>
                             
-                            <div>
-                                <h4 class="text-xs font-bold uppercase tracking-wider text-teal-600 mb-2 pb-1 border-b border-gray-100">
-                                    Kiara Suite <span class="text-gray-400 font-normal normal-case">(Max 6 People)</span>
-                                </h4>
-                                <ul class="space-y-1.5 text-sm font-medium text-gray-700">
-                                    <li><a href="https://book.nightsbridge.com/13989" target="_blank" class="hover:text-amber-600 transition block py-0.5">Kiara House / Suite</a></li>
-                                </ul>
+                            <div class="pt-2 border-t border-gray-100">
+                                <h4 class="text-xs font-bold uppercase tracking-wider text-teal-600 mb-1">Rates & Sheets</h4>
+                                <a href="https://book.nightsbridge.com/13989" target="_blank" class="text-xs font-bold text-amber-600 hover:text-amber-700 flex items-center space-x-1">
+                                    <span>📊 View Current Pricing Matrix</span>
+                                </a>
                             </div>
                         </div>
 
@@ -94,7 +169,7 @@
                 <a href="#" class="hover:text-amber-500 transition py-8">Activities</a>
                 <a href="#" class="hover:text-amber-500 transition py-8">Dining</a>
                 <a href="#" class="hover:text-amber-500 transition py-8">Gallery</a>
-                <a href="#" class="hover:text-amber-500 transition py-8">Contact</a>
+                <a href="#contact" class="hover:text-amber-500 transition py-8">Contact</a>
             </div>
             
             <div>
@@ -176,174 +251,4 @@
         </div>
     </header>
 
-    <section class="py-24 px-4 max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-            <span class="text-sm uppercase tracking-widest text-teal-600 font-bold">Choose Your Adventure</span>
-            <h2 class="font-serif text-3xl sm:text-5xl font-semibold mt-2 text-[#0B2530]">Discover Your Perfect Getaway</h2>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 transition hover:-translate-y-1 hover:shadow-xl duration-300">
-                <div class="h-64 overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="Luxury Chalet" class="w-full h-full object-cover">
-                    <span class="absolute top-4 left-4 bg-teal-600 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase">Premium</span>
-                </div>
-                <div class="p-6">
-                    <h3 class="font-serif text-2xl font-bold text-[#0B2530] mb-2">Luxury Chalets & Rooms</h3>
-                    <p class="text-gray-600 text-sm mb-4">Waterfront views, private wooden decks, and fully equipped self-catering options perfect for relaxing.</p>
-                    <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-                        <span class="text-sm font-semibold text-gray-500">From <strong class="text-lg text-amber-600">N$ 2,500</strong> / night</span>
-                        <a href="https://book.nightsbridge.com/13989" target="_blank" class="text-teal-600 font-bold text-sm uppercase tracking-wider hover:text-teal-800 transition">Explore &rarr;</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 transition hover:-translate-y-1 hover:shadow-xl duration-300">
-                <div class="h-64 overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1534067783941-51c9c23ecefd?auto=format&fit=crop&w=800&q=80" alt="Camping" class="w-full h-full object-cover">
-                    <span class="absolute top-4 left-4 bg-amber-500 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase">Adventure</span>
-                </div>
-                <div class="p-6">
-                    <h3 class="font-serif text-2xl font-bold text-[#0B2530] mb-2">Waterfront Camping</h3>
-                    <p class="text-gray-600 text-sm mb-4">Embrace pure nature. Prime shoreline campsites complete with electricity, shade, and neat braai facilities.</p>
-                    <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-                        <span class="text-sm font-semibold text-gray-500">From <strong class="text-lg text-amber-600">N$ 350</strong> / night</span>
-                        <a href="https://book.nightsbridge.com/13989" target="_blank" class="text-teal-600 font-bold text-sm uppercase tracking-wider hover:text-teal-800 transition">Explore &rarr;</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 transition hover:-translate-y-1 hover:shadow-xl duration-300">
-                <div class="h-64 overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80" alt="Day Visitor Facility" class="w-full h-full object-cover">
-                    <span class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase">Day Passes</span>
-                </div>
-                <div class="p-6">
-                    <h3 class="font-serif text-2xl font-bold text-[#0B2530] mb-2">Day Visits & Facilities</h3>
-                    <p class="text-gray-600 text-sm mb-4">Join us for a relaxing afternoon. Gain access to our stunning Giraffe Pool Bar, restaurant, and facilities.</p>
-                    <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-                        <span class="text-sm font-semibold text-gray-500">From <strong class="text-lg text-amber-600">N$ 150</strong> / adult</span>
-                        <a href="#" class="text-teal-600 font-bold text-sm uppercase tracking-wider hover:text-teal-800 transition">Explore &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-[#0B2530] text-white py-24 px-4">
-        <div class="max-w-7xl mx-auto">
-            <div class="mb-12 flex flex-col md:flex-row md:items-end justify-between">
-                <div>
-                    <span class="text-sm uppercase tracking-widest text-amber-400 font-bold">Unforgettable Memories</span>
-                    <h2 class="font-serif text-3xl sm:text-5xl font-semibold mt-2">The Oanob Experience</h2>
-                </div>
-                <p class="text-gray-400 max-w-md mt-4 md:mt-0">
-                    Whether you are seeking thrilling water sports or peaceful savanna tranquility, our reserve provides the best of both worlds.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="relative group overflow-hidden rounded-xl h-96 md:col-span-2 md:row-span-2">
-                    <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1000&q=80" alt="Game Drive" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
-                        <h4 class="font-serif text-2xl font-bold mb-1">Guided Game Drives</h4>
-                        <p class="text-sm text-gray-300">Spot beautiful giraffe, oryx, zebras, and eland roaming freely across 6,200 hectares of wild nature reserve.</p>
-                    </div>
-                </div>
-
-                <div class="relative group overflow-hidden rounded-xl h-48">
-                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=500&q=80" alt="Water Skiing" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
-                        <h4 class="font-serif text-lg font-bold">Water Skiing & Wakeboarding</h4>
-                    </div>
-                </div>
-
-                <div class="relative group overflow-hidden rounded-xl h-48">
-                    <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=500&q=80" alt="Solar Boat Cruise" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
-                        <h4 class="font-serif text-lg font-bold">Solar Boat Cruises</h4>
-                    </div>
-                </div>
-
-                <div class="relative group overflow-hidden rounded-xl h-48">
-                    <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=500&q=80" alt="Lake Spa" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
-                        <h4 class="font-serif text-lg font-bold">The Lake Spa Treatment</h4>
-                    </div>
-                </div>
-
-                <div class="relative group overflow-hidden rounded-xl h-48">
-                    <img src="https://images.unsplash.com/photo-1561501900-3701fa6a0864?auto=format&fit=crop&w=500&q=80" alt="Giraffe Pool Bar" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
-                        <h4 class="font-serif text-lg font-bold">Giraffe Pool Bar & Dining</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 bg-amber-50/60 px-4">
-        <div class="max-w-4xl mx-auto text-center">
-            <span class="text-sm uppercase tracking-widest text-amber-600 font-bold">Guest Experiences</span>
-            <h2 class="font-serif text-3xl sm:text-4xl font-semibold mt-2 mb-12 text-[#0B2530]">Loved by Travelers Worldwide</h2>
-            
-            <div class="bg-white p-8 sm:p-12 rounded-2xl shadow-xl relative border border-amber-100">
-                <div class="text-amber-500 flex justify-center space-x-1 mb-4 text-xl">
-                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                </div>
-                <p class="text-lg sm:text-xl italic text-gray-700 font-serif mb-6 leading-relaxed">
-                    "An incredible oasis! We stayed in a luxury waterfront chalet and watched the sunset directly over the dam. The game drive was fantastic, and it is so close to Windhoek. Perfect weekend escape!"
-                </p>
-                <h5 class="font-bold text-[#0B2530] text-xs uppercase tracking-widest">Marta S. — Munich, Germany</h5>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-[#071922] text-gray-400 py-16 px-4 border-t border-white/5">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-sm">
-            <div>
-                <h4 class="text-white font-serif text-lg font-bold mb-4">Lake Oanob Resort</h4>
-                <p class="leading-relaxed">
-                    Rehoboth, Namibia <br>
-                    Located 100km South of Windhoek off the B1 Highway.
-                </p>
-            </div>
-            <div>
-                <h4 class="text-white font-serif text-lg font-bold mb-4">Reservations & Enquiries</h4>
-                <p class="leading-relaxed">
-                    Email: <a href="mailto:reservations@oanob.com.na" class="text-amber-400 hover:underline">reservations@oanob.com.na</a><br>
-                    Tel / WhatsApp: <span class="text-white font-semibold">+264 (0) 81 129 1234</span>
-                </p>
-            </div>
-            <div class="text-left md:text-right flex flex-col justify-between">
-                <div>
-                    <p>&copy; 2026 Lake Oanob Resort. All Rights Reserved.</p>
-                    <p class="text-xs mt-2 text-gray-600">Connected dynamically to Property Management Suite.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        document.getElementById('nightsbridge-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Extract native values from UI date elements
-            const checkinVal = document.getElementById('checkin').value;   // Output: YYYY-MM-DD
-            const checkoutVal = document.getElementById('checkout').value; // Output: YYYY-MM-DD
-            const guestsVal = document.getElementById('guests').value;
-            
-            // Your live active properties identifier string
-            let nightsbridgeUrl = `https://book.nightsbridge.com/13989`;
-            
-            // Append explicit search queries required by the NightsBridge system to auto-filter calendar layout rows
-            if (checkinVal && checkoutVal) {
-                nightsbridgeUrl += `?userid=13989&bbid=13989&startdate=${checkinVal}&adults1=${guestsVal}`;
-            }
-            
-            // Route seamlessly into an active secondary tab
-            window.open(nightsbridgeUrl, '_blank');
-        });
-    </script>
-</body>
-</html>
+    <section id="our-story" class="py-24 px-4 bg-
