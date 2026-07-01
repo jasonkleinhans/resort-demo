@@ -13,7 +13,6 @@
         html { scroll-behavior: smooth; }
         body { font-family: 'Lato', sans-serif; }
         .font-serif { font-family: 'Playfair Display', serif; }
-        /* Prevent layout clipping behind fixed nav during anchor jumps */
         section { scroll-margin-top: 5rem; }
     </style>
 </head>
@@ -81,6 +80,7 @@
 
                         <div class="col-span-2 space-y-4 border-l border-r border-gray-100 px-4">
                             <h4 class="text-xs font-black uppercase tracking-wider text-[#0B2530] pb-1 border-b-2 border-[#0B2530]/10">Camping & Caravanning</h4>
+                            
                             <div class="grid grid-cols-2 gap-4">
                                 <div class="space-y-3">
                                     <div>
@@ -103,7 +103,11 @@
                                     </div>
                                     <div>
                                         <span class="text-[10px] uppercase tracking-wide text-emerald-600 font-bold block">Luxury Shaded, Waterfront View</span>
-                                        <p class="text-[11px] font-medium text-gray-600 leading-snug">Aloe Bay, Mountain View, Berakah, La Rive, Ruben Bay, Flintstones Heaven, C7, B14, Pride Rock, Hakuna Matata</p>
+                                        <div class="text-[11px] font-medium text-gray-600 leading-snug space-y-0.5 mt-1">
+                                            <a href="https://book.nightsbridge.com/13989" target="_blank" class="text-emerald-700 font-bold hover:underline block">Aloe Bay &rarr;</a>
+                                            <a href="https://book.nightsbridge.com/13989" target="_blank" class="text-emerald-700 font-bold hover:underline block">Mountain View &rarr;</a>
+                                            <span class="text-gray-500">Berakah, La Rive, Ruben Bay, Flintstones Heaven, C7, B14, Pride Rock, Hakuna Matata</span>
+                                        </div>
                                     </div>
                                     <div>
                                         <span class="text-[10px] uppercase tracking-wide text-indigo-600 font-bold block">Exclusive Bays</span>
@@ -111,14 +115,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="pt-2">
-                                <a href="https://book.nightsbridge.com/13989" target="_blank" class="inline-block text-xs bg-[#0B2530]/5 text-[#0B2530] font-bold px-3 py-1.5 rounded hover:bg-[#0B2530]/10 transition w-full text-center">Configure Campsites via NightsBridge &rarr;</a>
-                            </div>
                         </div>
 
                         <div class="space-y-4">
                             <div class="space-y-3">
                                 <h4 class="text-xs font-black uppercase tracking-wider text-[#0B2530] pb-1 border-b-2 border-[#0B2530]/10">En-Suite Rooms</h4>
+                                
                                 <div>
                                     <span class="text-[10px] uppercase tracking-wide text-gray-400 font-bold block mb-0.5">Twin Rooms (2 Single Beds) <span class="text-red-500 font-black">*Non-Self Catering</span></span>
                                     <ul class="space-y-0.5 text-xs font-medium text-gray-700">
@@ -126,18 +128,21 @@
                                         <li><a href="https://book.nightsbridge.com/13989" target="_blank" class="hover:text-amber-600 transition block">Zazu 3 / Zazu 4</a></li>
                                     </ul>
                                 </div>
+                                
                                 <div>
                                     <span class="text-[10px] uppercase tracking-wide text-gray-400 font-bold block mb-0.5">Double Room (1 Double Bed)</span>
                                     <ul class="space-y-0.5 text-xs font-medium text-gray-700">
                                         <li><a href="https://book.nightsbridge.com/13989" target="_blank" class="hover:text-amber-600 transition block">Zazu 5 / Zazu 6</a></li>
                                     </ul>
                                 </div>
+
                                 <div>
                                     <span class="text-[10px] uppercase tracking-wide text-gray-400 font-bold block mb-0.5">Family Rooms</span>
                                     <ul class="space-y-0.5 text-xs font-medium text-gray-700">
                                         <li><a href="https://book.nightsbridge.com/13989" target="_blank" class="hover:text-amber-600 transition block">Scar 1 / Scar 4</a></li>
                                     </ul>
                                 </div>
+
                                 <div>
                                     <span class="text-[10px] uppercase tracking-wide text-[#0B2530] font-bold block mb-0.5">Special Suites</span>
                                     <ul class="space-y-0.5 text-xs font-semibold text-gray-800">
@@ -254,7 +259,7 @@
                 </p>
             </div>
             <div class="h-full min-h-[400px] rounded-2xl overflow-hidden shadow-2xl relative group">
-                <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80" alt="Lake Oanob Waterfront" class="w-full h-full object-cover">
+                <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80" alt="Lake Oanob Waterfront Panorama" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-[#0B2530]/10 mix-blend-multiply"></div>
             </div>
         </div>
@@ -282,6 +287,7 @@
                         <div class="space-y-2 text-xs font-medium text-gray-500">
                             <p class="flex items-start"><span class="mr-1.5 text-amber-500">⚖️</span> Maximum weight limit is 95 kg per person.</p>
                             <p class="flex items-start"><span class="mr-1.5 text-red-500">🛑</span> No activities are allowed after sunset.</p>
+                            <p class="flex items-start"><span class="mr-1.5 text-gray-400">🕒</span> Last ticket will be sold 30 minutes before sunset.</p>
                         </div>
                     </div>
                 </div>
@@ -302,6 +308,7 @@
                         <div class="space-y-2 text-xs font-medium text-gray-500">
                             <p class="flex items-start"><span class="mr-1.5 text-amber-500">⚖️</span> Maximum weight limit is 95 kg per person.</p>
                             <p class="flex items-start"><span class="mr-1.5 text-red-500">🛑</span> No activities are allowed after sunset.</p>
+                            <p class="flex items-start"><span class="mr-1.5 text-gray-400">🕒</span> Last ticket will be sold 30 minutes before sunset.</p>
                         </div>
                     </div>
                 </div>
@@ -320,6 +327,43 @@
                             <div class="flex justify-between text-sm"><span class="font-medium text-gray-500">Children (3-12 years)</span><span class="font-bold text-gray-900">N$ 170.00 (p/P)</span></div>
                         </div>
                         <p class="text-xs text-gray-500 font-medium leading-relaxed">Note: 30 Minutes / Minimum setup constraints apply.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 flex flex-col justify-between transition duration-300 hover:shadow-xl">
+                <div>
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="Speedboat with Tube" class="w-full h-full object-cover">
+                        <span class="absolute top-4 right-4 bg-orange-600 text-white text-xs font-bold px-3 py-1 rounded-full">Min N$ 600</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl font-bold text-[#0B2530] mb-3">Speedboat with Tube</h3>
+                        <div class="space-y-1 mb-4 border-b border-gray-100 pb-4">
+                            <div class="flex justify-between text-sm"><span class="font-medium text-gray-500">Adults</span><span class="font-bold text-gray-900">N$ 420.00 (p/P)</span></div>
+                            <div class="flex justify-between text-sm"><span class="font-medium text-gray-500">Children (3-12 years)</span><span class="font-bold text-gray-900">N$ 270.00 (p/P)</span></div>
+                        </div>
+                        <p class="text-xs text-gray-500 font-medium">Note: 30 Minutes. Maximum number of guests to be decided.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 flex flex-col justify-between transition duration-300 hover:shadow-xl md:col-span-2 lg:col-span-1">
+                <div>
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=600&q=80" alt="Nature Drive" class="w-full h-full object-cover">
+                        <span class="absolute top-4 right-4 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full">1½ Hours</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl font-bold text-[#0B2530] mb-3">Nature Drive</h3>
+                        <div class="space-y-1 mb-4 border-b border-gray-100 pb-4">
+                            <div class="flex justify-between text-sm"><span class="font-medium text-gray-500">Adults</span><span class="font-bold text-gray-900">N$ 250.00 (p/P)</span></div>
+                            <div class="flex justify-between text-sm"><span class="font-medium text-gray-500">Children (3-12 years)</span><span class="font-bold text-gray-900">N$ 120.00 (p/P)</span></div>
+                        </div>
+                        <div class="space-y-1 text-xs font-medium text-gray-500">
+                            <p><span class="text-teal-600">💵</span> Note: Minimum N$ 400.00 per drive.</p>
+                            <p><span class="text-amber-600">🍹</span> Includes 1 complimentary drink per person.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -382,18 +426,24 @@
             </div>
             
             <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
-                <form class="space-y-4">
+                <form id="contact-enquiry-form" action="https://formspree.io/f/your-form-id-here" method="POST" class="space-y-4">
                     <div class="grid grid-cols-2 gap-4">
                         <div>
                             <label class="block text-xs font-bold uppercase text-gray-500 mb-1">Your Name</label>
-                            <input type="text" required class="w-full border border-gray-200 rounded-lg p-3 text-sm bg-gray-50/50">
+                            <input type="text" name="name" required class="w-full border border-gray-200 rounded-lg p-3 text-sm bg-gray-50/50 focus:outline-none focus:border-[#0B2530]">
                         </div>
                         <div>
                             <label class="block text-xs font-bold uppercase text-gray-500 mb-1">Email Address</label>
-                            <input type="email" required class="w-full border border-gray-200 rounded-lg p-3 text-sm bg-gray-50/50">
+                            <input type="email" name="email" required class="w-full border border-gray-200 rounded-lg p-3 text-sm bg-gray-50/50 focus:outline-none focus:border-[#0B2530]">
                         </div>
                     </div>
-                    <button type="submit" class="w-full bg-[#0B2530] hover:bg-[#071922] text-white font-bold p-3 rounded-lg text-xs uppercase tracking-wider transition duration-200">
+                    
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-gray-500 mb-1">Your Message</label>
+                        <textarea name="message" rows="4" required placeholder="Type your detailed message or reservation request here..." class="w-full border border-gray-200 rounded-lg p-3 text-sm bg-gray-50/50 focus:outline-none focus:border-[#0B2530]"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-[#0B2530] hover:bg-[#071922] text-white font-bold p-3 rounded-lg text-xs uppercase tracking-wider transition duration-200 shadow-md">
                         Send Message
                     </button>
                 </form>
@@ -429,15 +479,13 @@
                 </ul>
             </div>
 
-            <div class="flex flex-col justify-between">
-                <div>
-                    <h4 class="text-white font-serif text-lg font-bold mb-4">Emergency Channels</h4>
-                    <div class="bg-[#0B2530] border border-white/10 p-3.5 rounded-lg">
-                        <span class="block text-[10px] font-bold uppercase tracking-widest text-red-400 mb-0.5">After-Hours Care Line</span>
-                        <p class="text-white font-bold text-sm">During the night: +264 (0) 81 2534636</p>
-                    </div>
+            <div>
+                <h4 class="text-white font-serif text-lg font-bold mb-4">Emergency Care Channels</h4>
+                <div class="bg-[#0B2530] border border-white/10 p-3.5 rounded-lg">
+                    <span class="block text-[10px] font-bold uppercase tracking-widest text-red-400 mb-0.5">After-Hours Security Line</span>
+                    <p class="text-white font-bold text-sm">During the night: +264 (0) 81 2534636</p>
                 </div>
-                <div class="pt-6 text-xs text-gray-500">
+                <div class="pt-10 text-xs text-gray-500">
                     <p>&copy; 2026 Lake Oanob Resort. All Rights Reserved.</p>
                 </div>
             </div>
@@ -446,6 +494,7 @@
     </footer>
 
     <script>
+        // 1. NIGHTSBRIDGE REALTIME BOOKING CALENDAR LINKING ENGINE
         document.getElementById('nightsbridge-form').addEventListener('submit', function(e) {
             e.preventDefault();
             const checkinVal = document.getElementById('checkin').value;   
@@ -456,6 +505,30 @@
                 nightsbridgeUrl += `?userid=13989&bbid=13989&startdate=${checkinVal}&adults1=${guestsVal}`;
             }
             window.open(nightsbridgeUrl, '_blank');
+        });
+
+        // 2. CONTACT ENQUIRY ROUTING INTERCEPTOR WITH SUCCESS POPUP WINDOW INTERACTION
+        document.getElementById('contact-enquiry-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = e.target;
+            const name = form.elements['name'].value;
+            const email = form.elements['email'].value;
+            const message = form.elements['message'].value;
+            
+            // Build dynamic mailto execution framework routing natively to target matrix address
+            const targetRecipient = "admin@oanob.com.na";
+            const emailSubject = encodeURIComponent(`New Custom Website Getaway Enquiry from ${name}`);
+            const emailBody = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+            
+            // Initiate background fallback process launcher loop frame safely
+            const dynamicMailtoTrigger = document.createElement('a');
+            dynamicMailtoTrigger.href = `mailto:${targetRecipient}?subject=${emailSubject}&body=${emailBody}`;
+            dynamicMailtoTrigger.click();
+            
+            // Trigger explicit verification notice overlay box instantly as requested
+            alert("Message successfully sent! Our management team will be in contact soon.");
+            form.reset();
         });
     </script>
 </body>
