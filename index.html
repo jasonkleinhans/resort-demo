@@ -663,7 +663,7 @@
             return Math.ceil(timeDiff / (1000 * 3600 * 24));
         }
 
-        // Helper function to generate standardized calendar and explicit alignment parameters
+        // Generates an omni-compatible param payload containing all variations used across different NightsBridge versions
         function getQueryParamString() {
             const checkin = checkinInput.value;
             const checkout = checkoutInput.value;
@@ -671,14 +671,13 @@
             if (checkin && checkout) {
                 const nights = calculateNights(checkin, checkout);
                 if (nights > 0) {
-                    // startdate, staynights, and checkin parameter pairings force total interface synchronization
-                    return `?startdate=${checkin}&staynights=${nights}&checkin=${checkin}`;
+                    return `?startdate=${checkin}&enddate=${checkout}&checkin=${checkin}&checkout=${checkout}&staynights=${nights}`;
                 }
             }
             return '';
         }
 
-        // 1. DYNAMIC CHECK AVAILABILITY SYSTEM (Synchronized Dates)
+        // 1. DYNAMIC CHECK AVAILABILITY SYSTEM (Ultra-Compatible Dates Cross-Sourced)
         bookingForm?.addEventListener('submit', (e) => {
             e.preventDefault();
             const checkin = checkinInput.value;
@@ -689,12 +688,12 @@
                 return;
             }
 
-            // Redirects straight to NightsBridge with synchronized fields
+            // Redirects straight to NightsBridge with synchronized field blocks
             const dynamicUrl = BASE_NIGHTSBRIDGE_URL + getQueryParamString();
             window.open(dynamicUrl, '_blank');
         });
 
-        // 2. DYNAMIC CHALET TYPE SELECTION LINKER (Synchronized Dates + Room Type)
+        // 2. DYNAMIC CHALET TYPE SELECTION LINKER (Synchronized Omni-Dates + Room Type)
         document.querySelectorAll('.chalet-link').forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
