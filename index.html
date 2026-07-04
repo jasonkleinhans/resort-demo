@@ -14,7 +14,7 @@
         body { font-family: 'Lato', sans-serif; }
         .font-serif { font-family: 'Playfair Display', serif; }
         section { scroll-margin-top: 5rem; }
-        
+
         /* Forces native browser calendar dropdown icons to display white */
         input[type="date"]::-webkit-calendar-picker-indicator {
             filter: invert(1);
@@ -30,16 +30,16 @@
                 <div class="w-10 h-10 bg-teal-600 rounded-full flex items-center justify-center font-serif text-xl font-bold text-white">O</div>
                 <span class="font-serif text-xl tracking-wider font-bold">LAKE OANOB</span>
             </a>
-            
+
             <div class="hidden md:flex space-x-8 text-sm uppercase tracking-wider font-semibold items-center h-full">
                 <a href="#our-story" class="hover:text-amber-500 transition py-8">Our Story</a>
-                
+
                 <div class="relative group h-full flex items-center">
                     <button class="hover:text-amber-500 transition py-8 flex items-center space-x-1 outline-none uppercase">
                         <span>Accommodation</span>
                         <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
-                    
+
                     <div class="absolute top-20 left-1/2 -translate-x-1/2 w-[980px] bg-white text-gray-800 rounded-xl shadow-2xl p-6 border border-gray-100 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 transform scale-95 group-hover:scale-100 grid grid-cols-3 gap-8 z-50">
                         <div class="space-y-4">
                             <h4 class="text-xs font-black uppercase tracking-wider text-[#0B2530] pb-1 border-b-2 border-[#0B2530]/10">Luxury Chalets</h4>
@@ -136,7 +136,7 @@
                                     <p class="text-xs text-gray-800 font-semibold">Zazu 1 / Zazu 2</p>
                                 </div>
                             </div>
-                            
+
                             <div class="pt-4 border-t border-gray-100 space-y-2">
                                 <h4 class="text-xs font-black uppercase tracking-wider text-[#0B2530]">Rates Documentation</h4>
                                 <div class="space-y-1.5">
@@ -161,7 +161,7 @@
 
             <div class="flex items-center space-x-4">
                 <a href="https://book.nightsbridge.com/13989" target="_blank" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2.5 px-6 rounded-full uppercase text-xs tracking-wider transition shadow-lg">Book Now</a>
-                
+
                 <button id="menu-toggle" class="block md:hidden text-white focus:outline-none" aria-label="Toggle Menu">
                     <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                 </button>
@@ -170,13 +170,13 @@
 
         <div id="mobile-menu" class="hidden md:hidden bg-[#0B2530] border-t border-white/10 max-h-[calc(100vh-5rem)] overflow-y-auto px-4 py-6 space-y-4">
             <a href="#our-story" class="block text-sm uppercase tracking-wider font-semibold py-2 border-b border-white/5">Our Story</a>
-            
+
             <div>
                 <button id="mobile-accordion-toggle" class="w-full text-left text-sm uppercase tracking-wider font-semibold py-2 border-b border-white/5 flex justify-between items-center">
                     <span>Accommodation Breakdown</span>
                     <svg class="w-4 h-4 transition-transform" id="accordion-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                 </button>
-                
+
                 <div id="mobile-accordion-content" class="hidden mt-3 bg-white/5 rounded-xl p-4 space-y-6">
                     <div class="space-y-2">
                         <h4 class="text-xs font-black uppercase tracking-wider text-amber-400">Luxury Chalets</h4>
@@ -267,7 +267,7 @@
                 A refreshing waterfront oasis just one hour south of Windhoek. Experience luxury chalets and thrilling water adventures.
             </p>
         </div>
-        
+
         <div id="booking-section" class="absolute bottom-8 left-0 w-full px-4 z-20">
             <div class="max-w-6xl mx-auto bg-[#1A2E3B]/95 backdrop-blur-md p-6 rounded-2xl shadow-2xl border border-white/10">
                 <form id="nightsbridge-form" class="grid grid-cols-1 md:grid-cols-4 gap-6 items-end">
@@ -422,57 +422,42 @@
             <div class="text-center mb-16">
                 <span class="text-sm uppercase tracking-widest text-amber-600 font-bold">Local Heritage & Landmarks</span>
                 <h2 class="font-serif text-3xl sm:text-5xl font-semibold mt-2 text-[#0B2530]">Explore Rehoboth</h2>
-                <p class="text-gray-500 text-sm sm:text-base mt-3 max-w-xl mx-auto">Discover landmarks and local treasures surrounding our resort area. Please note these resources link out to independent community information portals.</p>
+                <p class="text-gray-500 text-sm sm:text-base mt-3 max-w-xl mx-auto">Discover landmarks surrounding our resort area. Please note these resources link out to independent community information.</p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200/60 flex flex-col justify-between transition duration-300 hover:shadow-lg">
-                    <div>
-                        <div class="h-48 overflow-hidden relative">
-                            <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=600&q=80" alt="Acacia Tree Forest" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="font-serif text-xl font-bold text-[#0B2530] mb-3">Acacia Tree Forest</h3>
-                            <p class="text-gray-600 text-sm leading-relaxed">Spanning thousands of hectares within the municipal boundaries of Rehoboth, this ancient camel-thorn nature sanctuary is widely recognized for its beautiful woodland groves—featuring historical trees estimated to be hundreds of years old.</p>
-                        </div>
+                <div class="bg-white rounded-2xl shadow-md border border-gray-200/60 p-8 flex flex-col justify-between transition duration-300 hover:shadow-lg">
+                    <div class="space-y-4">
+                        <h3 class="font-serif text-2xl font-bold text-[#0B2530]">Acacia Tree Forest</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Spanning thousands of hectares within the municipal boundaries of Rehoboth, this ancient camel-thorn nature sanctuary is widely recognized for its beautiful woodland groves—featuring historical trees estimated to be hundreds of years old.</p>
                     </div>
-                    <div class="p-6 pt-0">
-                        <a href="https://www.namibia-info.com/country/town/1237/Rehoboth" target="_blank" class="block w-full text-center bg-gray-100 hover:bg-amber-500 hover:text-white text-gray-700 font-bold py-2 px-4 rounded-xl text-xs uppercase tracking-wider transition duration-200">
-                            View Travel Directory →
+                    <div class="mt-8">
+                        <a href="https://www.namibia-info.com/country/town/1237/Rehoboth" target="_blank" class="inline-flex items-center text-xs font-bold uppercase tracking-wider text-amber-600 hover:text-amber-700 transition duration-200">
+                            View Travel Directory <span class="ml-2">→</span>
                         </a>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200/60 flex flex-col justify-between transition duration-300 hover:shadow-lg">
-                    <div>
-                        <div class="h-48 overflow-hidden relative">
-                            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Rehoboth Baster Community" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="font-serif text-xl font-bold text-[#0B2530] mb-3">Baster Community</h3>
-                            <p class="text-gray-600 text-sm leading-relaxed">Settled in 1870 under the leadership of Hermanus van Wyk, the Baster community has a distinct ancestry, legal frame profile, and rich cultural identity intrinsically tied to the ancestral development of the greater valley landscapes.</p>
-                        </div>
+                <div class="bg-white rounded-2xl shadow-md border border-gray-200/60 p-8 flex flex-col justify-between transition duration-300 hover:shadow-lg">
+                    <div class="space-y-4">
+                        <h3 class="font-serif text-2xl font-bold text-[#0B2530]">Baster Community</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Settled in 1870 under the leadership of Hermanus van Wyk, the Baster community has a distinct ancestry, legal frame profile, and rich cultural identity intrinsically tied to the ancestral development of the greater valley landscapes.</p>
                     </div>
-                    <div class="p-6 pt-0">
-                        <a href="https://en.wikipedia.org/wiki/Basters" target="_blank" class="block w-full text-center bg-gray-100 hover:bg-amber-500 hover:text-white text-gray-700 font-bold py-2 px-4 rounded-xl text-xs uppercase tracking-wider transition duration-200">
-                            Read Historical Archive →
+                    <div class="mt-8">
+                        <a href="https://en.wikipedia.org/wiki/Basters" target="_blank" class="inline-flex items-center text-xs font-bold uppercase tracking-wider text-amber-600 hover:text-amber-700 transition duration-200">
+                            Read Historical Archive <span class="ml-2">→</span>
                         </a>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200/60 flex flex-col justify-between transition duration-300 hover:shadow-lg">
-                    <div>
-                        <div class="h-48 overflow-hidden relative">
-                            <img src="https://images.unsplash.com/photo-1566073771259-6a850609994a?auto=format&fit=crop&w=600&q=80" alt="Rehoboth Museum" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="font-serif text-xl font-bold text-[#0B2530] mb-3">Rehoboth Museum</h3>
-                            <p class="text-gray-600 text-sm leading-relaxed">Housed inside the old historic Postmaster's building constructed in 1903, the town museum preserves structural collections tracking archaeological discoveries, deep territory heritage files, and local natural history artifacts.</p>
-                        </div>
+                <div class="bg-white rounded-2xl shadow-md border border-gray-200/60 p-8 flex flex-col justify-between transition duration-300 hover:shadow-lg">
+                    <div class="space-y-4">
+                        <h3 class="font-serif text-2xl font-bold text-[#0B2530]">Rehoboth Museum</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Housed inside the old historic Postmaster's building constructed in 1903, the town museum preserves structural collections tracking archaeological discoveries, deep territory heritage files, and local natural history artifacts.</p>
                     </div>
-                    <div class="p-6 pt-0">
-                        <a href="https://www.tourismus.com.na/tn-leisure/museums-and-exhibitions2023-04-22" target="_blank" class="block w-full text-center bg-gray-100 hover:bg-amber-500 hover:text-white text-gray-700 font-bold py-2 px-4 rounded-xl text-xs uppercase tracking-wider transition duration-200">
-                            Visit Museum Guide →
+                    <div class="mt-8">
+                        <a href="https://www.tourismus.com.na/tn-leisure/museums-and-exhibitions2023-04-22" target="_blank" class="inline-flex items-center text-xs font-bold uppercase tracking-wider text-amber-600 hover:text-amber-700 transition duration-200">
+                            Visit Museum Guide <span class="ml-2">→</span>
                         </a>
                     </div>
                 </div>
@@ -670,7 +655,7 @@
         // Dynamic flag element switcher script to override Windows font limits
         const countrySelect = document.getElementById('contact-country');
         const flagPreview = document.getElementById('flag-preview');
-        
+
         countrySelect?.addEventListener('change', (e) => {
             const countryCode = e.target.value.toLowerCase();
             const parsedCode = countryCode === 'uk' ? 'gb' : countryCode;
@@ -699,7 +684,7 @@
         function getQueryParamString() {
             const checkin = checkinInput.value;
             const checkout = checkoutInput.value;
-            
+
             if (checkin && checkout) {
                 const nights = calculateNights(checkin, checkout);
                 if (nights > 0) {
@@ -714,13 +699,12 @@
             e.preventDefault();
             const checkin = checkinInput.value;
             const checkout = checkoutInput.value;
-            
+
             if (new Date(checkin) >= new Date(checkout)) {
                 alert('Check-out date must be after the check-in date.');
                 return;
             }
 
-            // Redirects straight to NightsBridge with synchronized field blocks
             const dynamicUrl = BASE_NIGHTSBRIDGE_URL + getQueryParamString();
             window.open(dynamicUrl, '_blank');
         });
@@ -731,19 +715,16 @@
                 e.preventDefault();
                 const roomName = link.getAttribute('data-room');
                 const dateParams = getQueryParamString();
-                
+
                 let targetUrl = BASE_NIGHTSBRIDGE_URL;
-                
+
                 if (dateParams) {
                     targetUrl += dateParams + `&roomalias=${encodeURIComponent(roomName)}`;
                 } else {
                     targetUrl += `?roomalias=${encodeURIComponent(roomName)}`;
                 }
 
-                // If on mobile menu structure, safely hide accordion background layer
                 mobileMenu.classList.add('hidden');
-                
-                // Open new synchronized window segment
                 window.open(targetUrl, '_blank');
             });
         });
