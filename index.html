@@ -14,6 +14,12 @@
         body { font-family: 'Lato', sans-serif; }
         .font-serif { font-family: 'Playfair Display', serif; }
         section { scroll-margin-top: 5rem; }
+        
+        /* Forces native browser calendar dropdown icons to display white */
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+            cursor: pointer;
+        }
     </style>
 </head>
 <body class="bg-[#FBF9F6] text-gray-800 antialiased">
@@ -623,7 +629,7 @@
         });
 
         // Clean Close Context when anchor link selected
-        document.querySelectorAll('#mobile-menu a:not(.chalet-link)').forEach(link => {
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
             });
@@ -657,7 +663,7 @@
             return Math.ceil(timeDiff / (1000 * 3600 * 24));
         }
 
-        // Helper function to build the tracking URL parameters
+        // Helper function to generate standardized calendar and explicit alignment parameters
         function getQueryParamString() {
             const checkin = checkinInput.value;
             const checkout = checkoutInput.value;
@@ -665,13 +671,14 @@
             if (checkin && checkout) {
                 const nights = calculateNights(checkin, checkout);
                 if (nights > 0) {
-                    return `?startdate=${checkin}&staynights=${nights}`;
+                    // startdate, staynights, and checkin parameter pairings force total interface synchronization
+                    return `?startdate=${checkin}&staynights=${nights}&checkin=${checkin}`;
                 }
             }
             return '';
         }
 
-        // 1. DYNAMIC CHECK AVAILABILITY SYSTEM
+        // 1. DYNAMIC CHECK AVAILABILITY SYSTEM (Synchronized Dates)
         bookingForm?.addEventListener('submit', (e) => {
             e.preventDefault();
             const checkin = checkinInput.value;
@@ -682,19 +689,18 @@
                 return;
             }
 
-            // Redirects straight to NightsBridge with selected URL query parameters
+            // Redirects straight to NightsBridge with synchronized fields
             const dynamicUrl = BASE_NIGHTSBRIDGE_URL + getQueryParamString();
             window.open(dynamicUrl, '_blank');
         });
 
-        // 2. DYNAMIC CHALET TYPE SELECTION LINKER
+        // 2. DYNAMIC CHALET TYPE SELECTION LINKER (Synchronized Dates + Room Type)
         document.querySelectorAll('.chalet-link').forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
                 const roomName = link.getAttribute('data-room');
                 const dateParams = getQueryParamString();
                 
-                // Construct query parameters combining date query selection and selected room descriptors
                 let targetUrl = BASE_NIGHTSBRIDGE_URL;
                 
                 if (dateParams) {
@@ -706,7 +712,7 @@
                 // If on mobile menu structure, safely hide accordion background layer
                 mobileMenu.classList.add('hidden');
                 
-                // Fire dynamic tab routing
+                // Open new synchronized window segment
                 window.open(targetUrl, '_blank');
             });
         });
